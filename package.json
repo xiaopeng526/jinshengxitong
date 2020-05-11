@@ -1,0 +1,62 @@
+{
+    "name": "fe-pc-promotion",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "vue-cli-service serve --open ",
+        "build": "vue-cli-service lint && vue-cli-service build --modern",
+        "dev-build": "vue-cli-service lint && vue-cli-service build --mode development --modern",
+        "test-build": "vue-cli-service lint && vue-cli-service build --mode test --modern",
+        "staging-build": "vue-cli-service lint && vue-cli-service build --mode staging --modern",
+        "lint": "vue-cli-service lint",
+        "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "report": "vue-cli-service build --report"
+    },
+    "dependencies": {
+        "@sentry/integrations": "^5.12.0",
+        "bpit.common.data": "^0.1.3",
+        "core-js": "^3.4.4",
+        "element-ui": "^2.13.0",
+        "lodash.debounce": "^4.0.8",
+        "lodash.range": "^3.2.0",
+        "lodash.throttle": "^4.1.1",
+        "qs": "^6.9.1",
+        "register-service-worker": "^1.6.2",
+        "vue": "^2.6.10",
+        "vue-router": "^3.1.3",
+        "vue-storage-watcher": "^1.3.1",
+        "vue2-editor": "^2.10.2"
+    },
+    "devDependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/jest": "^24.0.19",
+        "@types/qs": "^6.9.0",
+        "@types/vue": "^2.0.0",
+        "@types/vue-router": "^2.0.0",
+        "@vue/cli-plugin-babel": "^4.1.0",
+        "@vue/cli-plugin-eslint": "^4.1.0",
+        "@vue/cli-plugin-pwa": "^4.1.0",
+        "@vue/cli-plugin-router": "^4.1.0",
+        "@vue/cli-plugin-typescript": "^4.1.0",
+        "@vue/cli-plugin-unit-jest": "^4.1.0",
+        "@vue/cli-service": "^4.1.0",
+        "@vue/eslint-config-prettier": "^5.0.0",
+        "@vue/eslint-config-typescript": "^4.0.0",
+        "@vue/test-utils": "1.0.0-beta.29",
+        "cz-conventional-changelog": "^3.1.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-vue": "^5.0.0",
+        "prettier": "^1.19.1",
+        "raw-loader": "^4.0.0",
+        "sass": "^1.23.7",
+        "sass-loader": "^8.0.0",
+        "typescript": "~3.5.3",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    }
+}

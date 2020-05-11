@@ -1,0 +1,184 @@
+// please add global style here
+
+/* 改变主题色变量 */
+// $--color-primary: #5dc5b2;
+
+/* 改变 icon 字体路径变量，必需 */
+// $--font-path: "~element-ui/lib/theme-chalk/fonts";
+
+// @import "~element-ui/packages/theme-chalk/src/index";
+
+.section-content {
+  background: white;
+  padding: 0 14px 16px 14px;
+}
+
+.table-width {
+  // min-width: 932px;
+  width: 100%;
+}
+
+.el-pagination {
+  font-size: 12px;
+  color: #606266;
+  letter-spacing: 0;
+  line-height: 14px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.el-tooltip__popper.tooltips {
+  background: #fffdf1 !important;
+  border: 1px solid #eace97;
+  font-size: 12px;
+  color: #1b1b1b !important;
+  letter-spacing: 0;
+  &[x-placement="right"] .popper__arrow {
+    border-right-color: #eace97 !important;
+    &::after {
+      border-right-color: #fffdf1 !important;
+    }
+  }
+  &[x-placement="top"] .popper__arrow {
+    border-top-color: #eace97 !important;
+    &::after {
+      border-top-color: #fffdf1 !important;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.slideLeft-enter-active,
+.slideInLeft,
+.slideLeft-leave-active,
+.slideOutLeft {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.slideLeft-enter-active,
+.slideInLeft {
+  -webkit-animation-name: "slideInLeft";
+  animation-name: "slideInLeft";
+}
+
+.slideLeft-leave-active,
+.slideOutLeft {
+  -webkit-animation-name: "slideOutLeft";
+  animation-name: "slideOutLeft";
+}
+.slideRight-enter-active,
+.slideInRight,
+.slideRight-leave-active,
+.slideOutRight {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.slideRight-enter-active,
+.slideInRight {
+  -webkit-animation-name: "slideInRight";
+  animation-name: "slideInRight";
+}
+
+.slideRight-leave-active,
+.slideOutRight {
+  -webkit-animation-name: "slideOutRight";
+  animation-name: "slideOutRight";
+}
+.el-tooltip__popper {
+  max-width: 80% !important;
+  // left: 10% !important;
+}
+
+#el-drawer__title [role="heading"]{
+  &:focus{
+    outline: none;
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>热力值</title>
+    <desc>Created with Sketch.</desc>
+    <g id="热力值" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-2">
+            <rect id="矩形备份-7" fill="#F19906" opacity="0.163916" x="0" y="0" width="22" height="22" rx="11"></rect>
+            <g id="录取分数表" transform="translate(4.125000, 4.125000)" fill-rule="nonzero">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="13.75" height="13.75"></rect>
+                <polygon id="路径" fill="#FFA000" points="2.11538462 5.02403846 5.28846154 6.08173077 8.99038462 3.4375 11.6346154 5.02403846 11.6346154 12.1634615 2.11538462 12.1634615"></polygon>
+                <path d="M4.23076923,7.40384615 L8.99038462,7.40384615 L8.99038462,8.46153846 L4.23076923,8.46153846 L4.23076923,7.40384615 Z M4.23076923,9.51923077 L7.40384615,9.51923077 L7.40384615,10.5769231 L4.23076923,10.5769231 L4.23076923,9.51923077 Z" id="形状" fill="#FADEA5"></path>
+                <polygon id="路径" fill="#FFA000" opacity="0.717889695" points="8.99038462 0.951923081 5.18269231 3.64903846 2.11538462 2.59134615 2.11538462 3.75480769 5.39423077 4.8125 8.99038462 2.22115385 11.6346154 3.80769231 11.6346154 2.53846154"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

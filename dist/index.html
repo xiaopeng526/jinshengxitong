@@ -1,0 +1,336 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><title>人才晋升系统</title><!--[if IE]><link rel="icon" href="//promotion.chengjiukehu.com/favicon.ico" /><![endif]--><style>html {
+        font-size: 16px;
+      }
+
+      #app {
+        height: 100%;
+      }
+
+      .hidden {
+        display: none;
+      }
+      /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:300); */
+      body {
+        padding: 0;
+        margin: 0;
+        background: #52ddab;
+        overflow: hidden;
+      }
+      /*.loading-container {
+         z-index: 99; 
+      }*/
+
+      .loading-text {
+        position: absolute;
+        /* font-family: "Open Sans"; */
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        left: 50%;
+        top: 58%;
+        margin-left: -20px;
+        z-index: 9999;
+      }
+
+      .body {
+        z-index: 9999;
+        position: absolute;
+        top: 50%;
+        margin-left: -50px;
+        left: 50%;
+        animation: speeder 0.4s linear infinite;
+      }
+      .body > span {
+        height: 5px;
+        width: 35px;
+        background: #000;
+        position: absolute;
+        top: -19px;
+        left: 60px;
+        border-radius: 2px 10px 1px 0;
+      }
+
+      .base span {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 100px solid #000;
+        border-bottom: 6px solid transparent;
+      }
+      .base span:before {
+        content: "";
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        right: -110px;
+        top: -16px;
+      }
+      .base span:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 0 solid transparent;
+        border-right: 55px solid #000;
+        border-bottom: 16px solid transparent;
+        top: -16px;
+        right: -98px;
+      }
+
+      .face {
+        position: absolute;
+        height: 12px;
+        width: 20px;
+        background: #000;
+        border-radius: 20px 20px 0 0;
+        transform: rotate(-40deg);
+        right: -125px;
+        top: -15px;
+      }
+      .face:after {
+        content: "";
+        height: 12px;
+        width: 12px;
+        background: #000;
+        right: 4px;
+        top: 7px;
+        position: absolute;
+        transform: rotate(40deg);
+        transform-origin: 50% 50%;
+        border-radius: 0 0 0 2px;
+      }
+
+      .body > span > span:nth-child(1),
+      .body > span > span:nth-child(2),
+      .body > span > span:nth-child(3),
+      .body > span > span:nth-child(4) {
+        width: 30px;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        animation: fazer1 0.2s linear infinite;
+      }
+
+      .body > span > span:nth-child(2) {
+        top: 3px;
+        animation: fazer2 0.4s linear infinite;
+      }
+
+      .body > span > span:nth-child(3) {
+        top: 1px;
+        animation: fazer3 0.4s linear infinite;
+        animation-delay: -1s;
+      }
+
+      .body > span > span:nth-child(4) {
+        top: 4px;
+        animation: fazer4 1s linear infinite;
+        animation-delay: -1s;
+      }
+
+      @keyframes fazer1 {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: -80px;
+          opacity: 0;
+        }
+      }
+      @keyframes fazer2 {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: -100px;
+          opacity: 0;
+        }
+      }
+      @keyframes fazer3 {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: -50px;
+          opacity: 0;
+        }
+      }
+      @keyframes fazer4 {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: -150px;
+          opacity: 0;
+        }
+      }
+      @keyframes speeder {
+        0% {
+          transform: translate(2px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -3px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-2px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 3px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-1px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-2px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(2px, 1px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+      .longfazers {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(237, 242, 245);
+        z-index: 9999;
+        opacity: 0.3;
+      }
+      .longfazers span {
+        position: absolute;
+        height: 2px;
+        width: 20%;
+        background: #000;
+      }
+      .longfazers span:nth-child(1) {
+        top: 20%;
+        animation: lf 0.6s linear infinite;
+        animation-delay: -5s;
+      }
+      .longfazers span:nth-child(2) {
+        top: 40%;
+        animation: lf2 0.8s linear infinite;
+        animation-delay: -1s;
+      }
+      .longfazers span:nth-child(3) {
+        top: 60%;
+        animation: lf3 0.6s linear infinite;
+      }
+      .longfazers span:nth-child(4) {
+        top: 80%;
+        animation: lf4 0.5s linear infinite;
+        animation-delay: -3s;
+      }
+
+      @keyframes lf {
+        0% {
+          left: 200%;
+        }
+        100% {
+          left: -200%;
+          opacity: 0;
+        }
+      }
+      @keyframes lf2 {
+        0% {
+          left: 200%;
+        }
+        100% {
+          left: -200%;
+          opacity: 0;
+        }
+      }
+      @keyframes lf3 {
+        0% {
+          left: 200%;
+        }
+        100% {
+          left: -100%;
+          opacity: 0;
+        }
+      }
+      @keyframes lf4 {
+        0% {
+          left: 200%;
+        }
+        100% {
+          left: -100%;
+          opacity: 0;
+        }
+      }</style><link href=//promotion.chengjiukehu.com/css/chunk-00c69326.406ae75b.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-018faf54.ff77fb23.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-031f2382.1f3cc6e6.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-040fa6a7.6c640ede.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-076129e3.611d87a7.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-09132081.a3b38653.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-0d4b84ac.56273612.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-10ae18a6.f04b358d.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-170ecf4f.a269b96d.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-1771d30c.47e8b861.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-18b92f7a.78b81b05.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-1abe183c.a735eaa1.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-1f2c8121.21cfdba3.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-276f33f0.e2915b2d.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-2958ffe8.2719ff30.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-2e89498a.a4996223.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-347f985e.dced9955.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-349649c8.1176a705.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-365ed5a8.8e028d13.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-39cd8f1a.c8d142fa.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-3b9a55d4.5bab5e31.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-415a2460.f3d324d6.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-42671e94.b79d0804.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-430fa8e6.92460501.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-525bd2a0.aeb0e448.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-53471c1c.5c3f6a1c.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-5661b11a.5ee3377e.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-58c564fa.b59a04f4.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-5f279f2a.934df314.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-752a719a.1ed33e24.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-76173720.4117dd6b.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-766b811e.39e0b2d5.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-79e57d96.91990b9c.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-902822fc.2bc4961d.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-ad28d62e.f1d1198a.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-b962123a.5e8bffb2.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-c92d7ecc.8492ca01.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-c95c5e34.eaeab174.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-d0155b50.2a345fc7.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-d6e4cb1c.f7332383.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-f7251748.2e6e00b0.css rel=prefetch><link href=//promotion.chengjiukehu.com/css/chunk-fa816cf2.fafcef28.css rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-00c69326.f6437f17.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-018faf54.8cb56b4b.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-031f2382.870ff562.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-040fa6a7.4aedbc89.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-076129e3.d2e8ab61.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-08260ed9.fbb75634.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-09132081.b50440d9.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-0d4b84ac.f93b6493.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-10ae18a6.5e6f7dfb.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-170ecf4f.c2e88c68.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-1771d30c.e122c444.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-18b92f7a.ad6a3017.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-1abe183c.62b12b6d.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-1f2c8121.3e41bc02.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-25b1ffe4.17a24003.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-276f33f0.ba698c6b.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-2958ffe8.5f095f63.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-2d0e97c2.9d7a1984.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-2d21a986.8420fc7b.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-2e89498a.f9838137.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-347f985e.51325ed1.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-349649c8.4db8111f.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-365ed5a8.88731f11.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-39cd8f1a.a652cebe.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-3b9a55d4.8ab0e714.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-415a2460.c8f795dd.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-42671e94.c8f3cb9d.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-430fa8e6.85825549.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-525bd2a0.b21b5999.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-53471c1c.24f14194.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-5661b11a.07b65ff3.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-58c564fa.95a7467f.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-5f279f2a.50f36096.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-752a719a.5c16ee93.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-76173720.0dcbb73c.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-766b811e.201a0c90.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-79e57d96.eee69995.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-902822fc.b9900268.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-ad28d62e.99c7fa2a.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-b962123a.7f5fd42a.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-c92d7ecc.0ebe1f8d.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-c95c5e34.9b6e8448.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-d0155b50.4d68903b.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-d6e4cb1c.3c080e1d.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-f7251748.6aedb08f.js rel=prefetch><link href=//promotion.chengjiukehu.com/js/chunk-fa816cf2.73709cef.js rel=prefetch><link href=//promotion.chengjiukehu.com/css/app.97a5ab8f.css rel=preload as=style><link href=//promotion.chengjiukehu.com/js/app.41b6d233.js rel=modulepreload as=script><link href=//promotion.chengjiukehu.com/js/chunk-vendors.8283f6a9.js rel=modulepreload as=script><link href=//promotion.chengjiukehu.com/css/app.97a5ab8f.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=//promotion.chengjiukehu.com/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=//promotion.chengjiukehu.com/img/icons/favicon-16x16.png><link rel=manifest href=//promotion.chengjiukehu.com/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=fe-pc-promotion><link rel=apple-touch-icon href=//promotion.chengjiukehu.com/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=//promotion.chengjiukehu.com/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=//promotion.chengjiukehu.com/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>请开启javascript!</strong></noscript><div class="hidden loading-container"><div class=body><span><span></span> <span></span> <span></span> <span></span></span><div class=base><span></span><div class=face></div></div></div><div class=longfazers><span></span> <span></span> <span></span> <span></span></div><div class=loading-text>Loading</div></div><script>window.bpit_elk_page_start_time = new Date().getTime();</script><script>(function(para) {
+        var p = para.sdk_url,
+          n = para.name,
+          w = window,
+          d = document,
+          s = "script",
+          x = null,
+          y = null;
+        if (typeof w["sensorsDataAnalytic201505"] !== "undefined") {
+          return false;
+        }
+        w["sensorsDataAnalytic201505"] = n;
+        w[n] =
+          w[n] ||
+          function(a) {
+            return function() {
+              (w[n]._q = w[n]._q || []).push([a, arguments]);
+            };
+          };
+        var ifs = [
+          "track",
+          "quick",
+          "register",
+          "registerPage",
+          "registerOnce",
+          "trackSignup",
+          "trackAbtest",
+          "setProfile",
+          "setOnceProfile",
+          "appendProfile",
+          "incrementProfile",
+          "deleteProfile",
+          "unsetProfile",
+          "identify",
+          "login",
+          "logout",
+          "trackLink",
+          "clearAllRegister",
+          "getAppStatus"
+        ];
+        for (var i = 0; i < ifs.length; i++) {
+          w[n][ifs[i]] = w[n].call(null, ifs[i]);
+        }
+        if (!w[n]._t) {
+          (x = d.createElement(s)), (y = d.getElementsByTagName(s)[0]);
+          x.async = 1;
+          x.src = p;
+          x.setAttribute("charset", "UTF-8");
+          w[n].para = para;
+          y.parentNode.insertBefore(x, y);
+        }
+      })({
+        sdk_url:
+          "https://static.zhiyinlou.com/talent/js/sensorsdata/sensorsdata.min.js",
+        heatmap_url:
+          "https://static.zhiyinlou.com/talent/js/sensorsdata/heatmap.min.js",
+        name: "sensors",
+        server_url: "https://sensorsdata-3.talbrain.com:8080/sa?project=default",
+        heatmap: { scroll_notice_map: "not_collect" },
+        show_log: false,
+        is_track_single_page: true
+      });</script><script src=https://static.zhiyinlou.com/talent/js/vue@2.6.11/vue.js></script><script src=https://static.zhiyinlou.com/talent/js/vue-router@3.1.5/vue-router.min.js></script><script src=https://static.zhiyinlou.com/talent/js/axios@0.19.2/axios.min.js></script><script src=https://static.zhiyinlou.com/talent/js/element-ui@2.13.0/index.js></script><script src=https://static.zhiyinlou.com/talent/js/sentry@5.10.2/bundle.min.js></script><link rel=stylesheet href=https://static.zhiyinlou.com/talent/css/elementui_52ddab/index.css><div id=app></div><script type=module src=//promotion.chengjiukehu.com/js/chunk-vendors.8283f6a9.js></script><script type=module src=//promotion.chengjiukehu.com/js/app.41b6d233.js></script><script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script src=//promotion.chengjiukehu.com/js/chunk-vendors-legacy.dcb84313.js nomodule></script><script src=//promotion.chengjiukehu.com/js/app-legacy.6df98c37.js nomodule></script></body><script>var loaderEl = document.querySelector(".loading-container");
+    loaderEl.className = "hidden loading-container";</script></html>
